@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --success: #166534;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.4rem;
+}
+
+header p {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.75rem;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#compareButton {
+  background: var(--accent);
+  color: white;
+}
+
+#compareButton:hover {
+  background: var(--accent-dark);
+}
+
+.order-btn {
+  margin-top: 1rem;
+  background: #16a34a;
+  color: white;
+}
+
+.order-btn:hover {
+  background: var(--success);
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+tr.cheapest {
+  background: #ecfdf5;
+  font-weight: 700;
+}
+
+.hint {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 620px) {
+  .actions {
+    justify-content: stretch;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
