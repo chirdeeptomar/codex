@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK Supermarket Basket Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>UK Supermarket Basket Checker</h1>
+        <p>
+          Paste your shopping list, compare basket totals across UK supermarkets,
+          and jump straight to checkout at the cheapest one.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1) Your shopping list</h2>
+        <label for="shoppingList" class="label">One item per line</label>
+        <textarea
+          id="shoppingList"
+          placeholder="milk\nbread\nbananas\neggs"
+          rows="8"
+        ></textarea>
+      </section>
+
+      <section class="card">
+        <h2>2) Supermarkets to compare</h2>
+        <div class="checkbox-grid" id="supermarketOptions"></div>
+      </section>
+
+      <section class="actions">
+        <button id="compareButton">Compare prices</button>
+      </section>
+
+      <section class="card hidden" id="resultsSection">
+        <h2>3) Basket comparison</h2>
+        <div id="summary"></div>
+        <div id="tableWrap"></div>
+        <button id="orderButton" class="order-btn hidden">Order from cheapest</button>
+        <p class="hint">
+          Note: Prices are estimated from demo catalog data, and ordering opens the
+          supermarket's site with your full list prefilled as a search query.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
